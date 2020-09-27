@@ -29,7 +29,7 @@ public class WaitTest {
     }
 
     @Test
-    public void executeTest() throws InterruptedException {
+    public void executeTestWithWait() {
         driver.get("https://www.saucedemo.com");
         WebDriverWait wait = new WebDriverWait(driver, 20);
 

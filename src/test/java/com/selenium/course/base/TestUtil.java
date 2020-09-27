@@ -11,9 +11,6 @@ import org.testng.annotations.BeforeTest;
 
 import com.selenium.course.driver.DriverFactory;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class TestUtil {
     private String browser;
     private String url;

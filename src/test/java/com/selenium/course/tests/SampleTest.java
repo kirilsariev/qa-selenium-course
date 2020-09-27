@@ -1,7 +1,5 @@
 package com.selenium.course.tests;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +22,7 @@ public class SampleTest {
     }
 
     @Test
-    public void executeTest() throws InterruptedException {
+    public void executeSimpleTest() throws InterruptedException {
         driver.get("https://www.saucedemo.com");
 
         WebElement username = driver.findElement(By.id("user-name"));
@@ -42,8 +40,6 @@ public class SampleTest {
 
         WebElement addToBasketButton = driver.findElement(By.xpath("//div[text()='Sauce Labs Onesie']//ancestor::div[@class='inventory_item']//button"));
         addToBasketButton.click();
-
-        Thread.sleep(1000);
 
     }
 
