@@ -54,8 +54,6 @@ public class WaitTest {
 
         fluentWait.until(ExpectedConditions.invisibilityOf(loginButton));
 
-        Thread.sleep(1000);
-
     }
 
     @AfterTest
