@@ -32,7 +32,7 @@ public class LoginTests extends TestUtil {
     }
 
     @Test(dataProvider = "login-data-file")
-    public void executeTest(String user, String pass) throws InterruptedException {
+    public void executeNegativeLoginTest(String user, String pass) throws InterruptedException {
 
         WebElement username = driver.findElement(By.id("user-name"));
         username.sendKeys(user);

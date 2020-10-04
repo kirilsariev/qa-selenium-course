@@ -11,9 +11,12 @@ import org.testng.annotations.BeforeTest;
 
 import com.selenium.course.driver.DriverFactory;
 
+import lombok.Getter;
+
 public class TestUtil {
     private String browser;
     private String url;
+    @Getter
     private int implicitWait;
     public WebDriver driver;
 
