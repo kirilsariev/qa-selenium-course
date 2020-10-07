@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+        jdk 'jdk-1.8.0_172'
+    }
 
     stages {
         stage('Build') {
@@ -10,12 +14,17 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "mvn clean test"
+                bat 'mvn -Dmaven.test.failure.ignore=true clean test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        stage('Publish Test Results') {
+            steps {
+                step([$class: 'Publisher', reportFilenamePattern: 'target/surefire-reports/testng-results.xml'])
             }
         }
     }
