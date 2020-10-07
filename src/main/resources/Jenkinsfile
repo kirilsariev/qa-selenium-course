@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat 'mvn -Dmaven.test.failure.ignore=true clean test'
+                bat 'mvn -Dtestng.dtd.http=true clean test'
             }
         }
         stage('Deploy') {
