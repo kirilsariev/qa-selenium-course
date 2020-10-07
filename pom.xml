@@ -65,7 +65,7 @@
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>suites/suite1.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/suites/suite1.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
