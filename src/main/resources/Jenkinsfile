@@ -5,8 +5,8 @@ pipeline {
         jdk 'jdk-1.8.0_172'
     }
      parameters {
-         string(name: 'APP_VERSION', defaultValue: '1.0.0', description: 'select application version for deployment')
-       //  choice(name: 'APP_VERSION', choices: "[1.0.0, 1.1.0]", description: 'select application version for deployment')
+       //  string(name: 'APP_VERSION', defaultValue: '1.0.0', description: 'select application version for deployment')
+         choice(name: 'APP_VERSION', choices: "[1.0.0, 1.1.0]", description: 'select application version for deployment')
      }
 
     stages {
