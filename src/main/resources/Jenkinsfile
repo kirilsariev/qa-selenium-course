@@ -4,22 +4,21 @@ pipeline {
         maven 'maven'
         jdk 'jdk-1.8.0_172'
     }
+     parameters {
+         string(name: 'APP_VERSION', defaultValue: '1.0.0', description: 'select application version for deployment')
+       //  choice(name: 'APP_VERSION', choices: "[1.0.0, 1.1.0]", description: 'select application version for deployment')
+     }
 
     stages {
-        stage('Build') {
+        stage('Deploy Application') {
             steps {
-                echo 'Building..'
-            }
-        }
+                echo 'Deploying....'
+       }
+    }
         stage('Test') {
             steps {
                 echo 'Testing..'
                 bat 'mvn -Dtestng.dtd.http=true clean test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
             }
         }
     }
