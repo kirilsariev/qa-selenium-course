@@ -23,7 +23,7 @@ public class ProductTests extends TestUtil {
 
         Assert.assertTrue(productListerPage.isProductsLabelDisplayed());
 
-        Reporter.log("Login is successful");
+        Reporter.log("Login is successful.");
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertFalse(productListerPage.isProductPriceCorrect("Sauce Labs Onesie", "$8.99"));
