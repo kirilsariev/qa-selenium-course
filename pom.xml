@@ -46,6 +46,12 @@
             <artifactId>webdrivermanager</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>3.182.0</version>
+        </dependency>
     </dependencies>
 
     <build>
